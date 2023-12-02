@@ -3,6 +3,9 @@ import studentController from '../Controllers/studentControllers';
 
 const router = express.Router();
 
+///studentController.hello();
+
+
 router.post('/signup', studentController.signupStudent);
 router.post('/login', studentController.login);
 router.get('/tasks', studentController.getTasks);

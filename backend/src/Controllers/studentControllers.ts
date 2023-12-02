@@ -5,6 +5,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 const login = async (req: Request, res: Response) => {
+  console.log('Reached loginStudent function');
   try {
     const { email, password } = req.body;
 
@@ -50,6 +51,7 @@ const getTasks = async (req: Request, res: Response) => {
   };
 
 const completeTask = async (req: Request, res: Response) => {
+  console.log('Reached  complete task function');
   try {
     const { taskId, newStatus } = req.body;
 
@@ -107,6 +109,10 @@ const signupStudent = async (req: Request, res: Response) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   };
+
+  const hello = async ()=>{
+    console.log("hey Lalit 111!!!");
+  }
   
-  export default { login, getTasks, completeTask, signupStudent };
+  export default { login, getTasks, completeTask, signupStudent,hello };
   
